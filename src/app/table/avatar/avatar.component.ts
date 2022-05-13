@@ -7,6 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class AvatarComponent implements OnInit {
   @Input() avatar: string;
+  @Input() age: any;
   constructor() {
     this.avatar = "";
   }

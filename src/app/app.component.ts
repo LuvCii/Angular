@@ -19,7 +19,7 @@ export class AppComponent {
   {
     id: 2,
     name: "Tran",
-    age: 21,
+    age: 31,
     gender: 0,
     avatar: 'https://picsum.photos/200/300',
     status: 1
@@ -35,7 +35,7 @@ export class AppComponent {
   {
     id: 4,
     name: "Dinh",
-    age: 28,
+    age: 40,
     gender: 0,
     avatar: 'https://picsum.photos/200/300',
     status: 0
