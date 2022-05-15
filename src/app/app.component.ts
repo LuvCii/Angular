@@ -41,4 +41,26 @@ export class AppComponent {
     status: 0
   }
   ]
+
+
+  //? click vào thẻ h1
+  name = '';
+  clickH1() {
+    console.log("Da click vao h1");
+    this.name = 'Poly'
+
+  }
+
+  //? Hidden table
+  showStatus = true;
+  changeList() {
+    this.showStatus = !this.showStatus;
+  }
+
+  //? Định nghĩa hàm khi thay đổi nội dung input
+  inputValue = '';
+  changeInput(e: any) {
+    this.inputValue = e.target.value;
+  }
 }
+

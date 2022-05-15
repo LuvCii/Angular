@@ -1,8 +1,19 @@
 <div class="container">
     <div>
-        <h1>List Teachers</h1>
+        <div>
+            <h1 (click)="clickH1()">List Teachers {{name}}</h1>
+        </div>
+        <div>
+            <form action="">
+                <input type="text" (keydown)="changeInput($event)" [value]="inputValue">
+                <p>{{inputValue}}</p>
+            </form>
+        </div>
+        <div>
+            <button class="btn btn-info" (click)="changeList()">{{showStatus ? 'Ẩn' : 'Hiện'}} danh sách</button>
+        </div>
     </div>
-    <app-table [users]="teachers"></app-table>
+    <app-table [users]="teachers" *ngIf="showStatus"></app-table>
     <!-- <div>
         Tên sinh viên:
         <app-name></app-name>
