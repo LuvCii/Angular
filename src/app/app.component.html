@@ -3,10 +3,40 @@
         <div>
             <h1 (click)="clickH1()">List Teachers {{name}}</h1>
         </div>
-        <div>
+        <!-- <div>
             <form action="">
                 <input type="text" (keydown)="changeInput($event)" [value]="inputValue">
                 <p>{{inputValue}}</p>
+            </form>
+        </div> -->
+        <div>
+            <p>Form đăng ký</p>
+            <form action="POST">
+                <div>
+                    <label for="">Tên</label>
+                    <input type="text" class="form-control" (input)="onInput($event, 'name')" [value]="inputValues.name">
+                </div>
+                <div>
+                    <label for="">Age</label>
+                    <input type="number" class="form-control" (input)="onInput($event, 'age')" [value]="inputValues.age">
+                </div>
+                <div>
+                    <label for="">Gender</label> <br />
+                    <input type="radio" class="form-check-input" (input)="onInput($event, 'gender')" [checked]="inputValues.gender === '1'" [value]="1">Nam
+                    <input type="radio" class="form-check-input" (input)="onInput($event, 'gender')" [checked]="inputValues.gender === '0'" [value]="0">Nữ
+                </div>
+                <div>
+                    <label for="">Avatar</label>
+                    <input type="input" class="form-control" (input)="onInput($event, 'avatar')" [value]="inputValues.avatar">
+                </div>
+                <div>
+                    <label for="">Status</label> <br />
+                    <input type="radio" class="form-check-input" (input)="onInput($event, 'status')" [checked]="inputValues.status === '1'" [value]="1">Đang làm việc
+                    <input type="radio" class="form-check-input" (input)="onInput($event, 'status')" [checked]="inputValues.status === '0'" [value]="0">Nghỉ làm
+                </div>
+                <div>
+                    <button type="button" (click)="onSubmit()">Thêm</button>
+                </div>
             </form>
         </div>
         <div>
