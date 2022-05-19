@@ -1,0 +1,27 @@
+<!-- <p>{{userForm.valid | json}}</p>
+ -->
+<!-- pipe chuyển đổi dữ liệu sang kiểu mới ( json ) -->
+<form action="" #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)">
+    <div class="form-group">
+        <label for="">Tên</label>
+        <input type="text" class="form-control" name="name" ngModel required minlength="6" #name="ngModel">
+        <!-- <span>{{name.errors | json}}</span> <br> -->
+        <app-show-validate [field]="name" key="Tên"></app-show-validate>
+
+    </div>
+    <div>
+        <label class="form-group" for="">Tuổi</label>
+        <input type="number" class="form-control" name="age" ngModel required min="2" max="100" #age="ngModel">
+        <!-- <span>{{name.errors | json}}</span> <br> -->
+        <app-show-validate [field]="age" key="Tuổi"></app-show-validate>
+    </div>
+    <div>
+        <label class="form-group" for="">Email</label>
+        <input type="text" class="form-control" name="email" ngModel required email #email="ngModel">
+        <!-- <span>{{name.errors | json}}</span> <br> -->
+        <app-show-validate [field]="email" key="Email"></app-show-validate>
+    </div>
+    <div>
+        <button [disabled]="!userForm.valid" class="btn btn-success">Submit</button>
+    </div>
+</form>

@@ -11,6 +11,9 @@ import { AgeComponent } from './table/age/age.component';
 import { GenderComponent } from './table/gender/gender.component';
 import { AvatarComponent } from './table/avatar/avatar.component';
 import { StatusComponent } from './table/status/status.component';
+import { FormsModule } from '@angular/forms';
+import { FormComponent } from './form/form.component';
+import { ShowValidateComponent } from './component/show-validate/show-validate.component';
 
 @NgModule({
   declarations: [
@@ -21,12 +24,15 @@ import { StatusComponent } from './table/status/status.component';
     AgeComponent,
     GenderComponent,
     AvatarComponent,
-    StatusComponent
+    StatusComponent,
+    FormComponent,
+    ShowValidateComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    FormsModule //? Form module được sử dụng ở các component 
   ],
   providers: [],
   bootstrap: [AppComponent]
