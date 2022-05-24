@@ -52,7 +52,7 @@ export class FormComponent implements OnInit {
       })
     } else {
       //? 2.1 chỉnh Sửa
-      const index = this.users.findIndex(user => user.id === this.inputValues.id)
+      const index = this.users.findIndex((user) => user.id === this.inputValues.id)
       // console.log(index);
       if (index > -1) {
         this.users[index] = {
@@ -82,14 +82,15 @@ export class FormComponent implements OnInit {
     //? 1. Tìm ra user có id là userId truyền vào
     const editUser = this.users.find((user) => user.id === userId)
     console.log(editUser);
+
+    //? 2. Nếu tìm ra thì mới gán giá trị lên form
     if (editUser) {
       this.inputValues = { ...editUser }
     }
 
-    //? 2. Nếu tìm ra thì mới gán giá trị lên form
-    if (editUser) {
-      // this.inputValues = editUser;
-    }
+    // if (editUser) {
+    //    this.inputValues = editUser;
+    // }
   }
 
 }

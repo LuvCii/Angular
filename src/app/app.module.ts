@@ -14,6 +14,9 @@ import { StatusComponent } from './table/status/status.component';
 import { FormsModule } from '@angular/forms';
 import { FormComponent } from './form/form.component';
 import { ShowValidateComponent } from './component/show-validate/show-validate.component';
+import { UserComponent } from './user/user.component';
+import { UserListComponent } from './user/user-list/user-list.component';
+import { UserFormComponent } from './user/user-form/user-form.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,10 @@ import { ShowValidateComponent } from './component/show-validate/show-validate.c
     AvatarComponent,
     StatusComponent,
     FormComponent,
-    ShowValidateComponent
+    ShowValidateComponent,
+    UserComponent,
+    UserListComponent,
+    UserFormComponent
   ],
   imports: [
     BrowserModule,
