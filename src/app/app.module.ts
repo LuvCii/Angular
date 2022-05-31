@@ -17,6 +17,13 @@ import { ShowValidateComponent } from './component/show-validate/show-validate.c
 import { UserComponent } from './user/user.component';
 import { UserListComponent } from './user/user-list/user-list.component';
 import { UserFormComponent } from './user/user-form/user-form.component';
+import { HomeComponent } from './home/home.component';
+import { ClientLayoutComponent } from './layouts/client-layout/client-layout.component';
+import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
+import { AdminProductListComponent } from './pages/admin/admin-product/admin-product-list/admin-product-list.component';
+import { AdminProductFormComponent } from './pages/admin/admin-product/admin-product-form/admin-product-form.component';
+import { AdminProductDetailComponent } from './pages/admin/admin-product/admin-product-detail/admin-product-detail.component';
+import { HttpClientModule } from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -32,13 +39,20 @@ import { UserFormComponent } from './user/user-form/user-form.component';
     ShowValidateComponent,
     UserComponent,
     UserListComponent,
-    UserFormComponent
+    UserFormComponent,
+    HomeComponent,
+    ClientLayoutComponent,
+    AdminLayoutComponent,
+    AdminProductListComponent,
+    AdminProductFormComponent,
+    AdminProductDetailComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    FormsModule //? Form module được sử dụng ở các component 
+    FormsModule,//? Form module được sử dụng ở các component 
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

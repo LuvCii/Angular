@@ -1,0 +1,15 @@
+{
+    "products": [{
+            "id": 1,
+            "name": "iphone11"
+        },
+        {
+            "id": 2,
+            "name": "iphone12"
+        },
+        {
+            "id": 3,
+            "name": "iphone13"
+        }
+    ]
+}
