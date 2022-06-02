@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { Product } from '../types/Products';
+import { Product, ProductCreate } from '../types/Products';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +14,16 @@ export class ProductService {
   getProducts(): Observable<Product[]> {
     return this.http.get<Product[]>(environment.products)
   }
+
   getProduct(id: string): Observable<Product> {
     return this.http.get<Product>(`${environment.products}/${id}`)
+  }
+
+  deleteProduct(id: number | string): Observable<any> {
+    return this.http.delete(`${environment.products}/${id}`)
+  }
+
+  createProduct(data: ProductCreate): Observable<Product> {
+    return this.http.post<Product>(`${environment.products}`, data)
   }
 }

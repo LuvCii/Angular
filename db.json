@@ -1,15 +1,32 @@
 {
-    "products": [{
-            "id": 1,
-            "name": "iphone11"
-        },
-        {
-            "id": 2,
-            "name": "iphone12"
-        },
-        {
-            "id": 3,
-            "name": "iphone13"
-        }
-    ]
+  "products": [
+    {
+      "id": 1,
+      "name": "iphone11"
+    },
+    {
+      "id": 2,
+      "name": "iphone12"
+    },
+    {
+      "id": 3,
+      "name": "iphone12"
+    },
+    {
+      "id": 4,
+      "name": "iphone12"
+    },
+    {
+      "id": 5,
+      "name": "iphone12"
+    },
+    {
+      "id": 6,
+      "name": "iphone12"
+    },
+    {
+      "name": "iphone8",
+      "id": 9
+    }
+  ]
 }

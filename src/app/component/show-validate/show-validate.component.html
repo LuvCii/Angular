@@ -4,6 +4,9 @@
 <span class="text-warning" *ngIf="(field.dirty || field.touched) && field.errors?.['minlength']">{{key}} không được dưới
     {{field.errors?.['minlength'].requiredLength}} ký tự
 </span>
+<span class="text-warning" *ngIf="(field.dirty || field.touched) && field.errors?.['maxlength']">{{key}} tối đa
+    {{field.errors?.['maxlength'].requiredLength}} ký tự
+</span>
 <span class="text-warning" *ngIf="(field.dirty || field.touched)  && field.errors?.['min']">{{key}} không được dưới
     {{field.errors?.['min'].min}}
 </span>

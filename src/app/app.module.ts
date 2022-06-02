@@ -11,7 +11,7 @@ import { AgeComponent } from './table/age/age.component';
 import { GenderComponent } from './table/gender/gender.component';
 import { AvatarComponent } from './table/avatar/avatar.component';
 import { StatusComponent } from './table/status/status.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FormComponent } from './form/form.component';
 import { ShowValidateComponent } from './component/show-validate/show-validate.component';
 import { UserComponent } from './user/user.component';
@@ -24,6 +24,7 @@ import { AdminProductListComponent } from './pages/admin/admin-product/admin-pro
 import { AdminProductFormComponent } from './pages/admin/admin-product/admin-product-form/admin-product-form.component';
 import { AdminProductDetailComponent } from './pages/admin/admin-product/admin-product-detail/admin-product-detail.component';
 import { HttpClientModule } from '@angular/common/http'
+
 
 @NgModule({
   declarations: [
@@ -52,6 +53,7 @@ import { HttpClientModule } from '@angular/common/http'
     AppRoutingModule,
     NgbModule,
     FormsModule,//? Form module được sử dụng ở các component 
+    ReactiveFormsModule,
     HttpClientModule
   ],
   providers: [],
