@@ -11,11 +11,13 @@ export class ProductService {
 
   //? Khai báo http để có đối tượng httpClient tương tác với phương thức api
   constructor(private http: HttpClient) { }
+
+  //? Kiểu dữ liệu Observable sẽ giúp lắng nghe API trả về kết quả
   getProducts(): Observable<Product[]> {
     return this.http.get<Product[]>(environment.products)
   }
 
-  getProduct(id: string): Observable<Product> {
+  getProduct(id: number): Observable<Product> {
     return this.http.get<Product>(`${environment.products}/${id}`)
   }
 
@@ -23,7 +25,12 @@ export class ProductService {
     return this.http.delete(`${environment.products}/${id}`)
   }
 
+  //? Dữ liệu gửi đi {name: string}, nhận về {id: number, name: string}
   createProduct(data: ProductCreate): Observable<Product> {
     return this.http.post<Product>(`${environment.products}`, data)
+  }
+
+  updateProduct(id: string, data: ProductCreate): Observable<Product> {
+    return this.http.patch<Product>(`${environment.products}/${id}`, data)
   }
 }

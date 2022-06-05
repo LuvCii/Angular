@@ -16,3 +16,8 @@
 <span class="text-warning" *ngIf="(field.dirty || field.touched)  && field.errors?.['email']">{{key}}phải đúng
     định dạng
 </span>
+
+<!--? Custom validate -->
+<span class="text-warning" *ngIf="(field.dirty || field.touched)  && field.errors?.['hasProductError']">{{key}}phải chứa
+    từ 'product'
+</span>

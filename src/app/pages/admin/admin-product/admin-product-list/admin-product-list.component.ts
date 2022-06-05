@@ -31,6 +31,15 @@ export class AdminProductListComponent implements OnInit {
     })
   }
 
+  onUpdateStatus(productId: number, newStatus: number) {
+    this.productService.updateProduct(`${productId}`, {
+      status: newStatus
+    }).subscribe(data => {
+      this.onGetList();
+    });
+  }
+
+
   onDelete(id: string | number) {
     //? confirm
     const confirmDelete = confirm("Are you sure you want to delete");

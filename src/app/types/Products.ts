@@ -1,7 +1,9 @@
 export type Product = {
     id: number,
-    name: string
+    name: string,
+    status: number
 };
 export type ProductCreate = {
-    name: string
+    name?: string,
+    status?: number
 };

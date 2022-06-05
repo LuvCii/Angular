@@ -14,7 +14,8 @@ export class AdminProductDetailComponent implements OnInit {
   constructor(private productService: ProductService, private activeProductRoute: ActivatedRoute) {
     this.product = {
       id: 0,
-      name: ''
+      name: '',
+      status: 0,
     }
   }
 

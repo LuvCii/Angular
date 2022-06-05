@@ -1,32 +1,19 @@
 {
   "products": [
     {
-      "id": 1,
-      "name": "iphone11"
+      "status": 0,
+      "name": "iphone 10",
+      "id": 1
     },
     {
-      "id": 2,
-      "name": "iphone12"
+      "status": 1,
+      "name": "iphone 11",
+      "id": 2
     },
     {
-      "id": 3,
-      "name": "iphone12"
-    },
-    {
-      "id": 4,
-      "name": "iphone12"
-    },
-    {
-      "id": 5,
-      "name": "iphone12"
-    },
-    {
-      "id": 6,
-      "name": "iphone12"
-    },
-    {
-      "name": "iphone8",
-      "id": 9
+      "status": 0,
+      "name": "iphone 12 product",
+      "id": 3
     }
   ]
 }
