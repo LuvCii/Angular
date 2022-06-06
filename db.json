@@ -1,19 +1,23 @@
 {
-  "products": [
-    {
-      "status": 0,
-      "name": "iphone 10",
-      "id": 1
-    },
-    {
-      "status": 1,
-      "name": "iphone 11",
-      "id": 2
-    },
-    {
-      "status": 0,
-      "name": "iphone 12 product",
-      "id": 3
-    }
-  ]
+    "products": [{
+            "status": 0,
+            "name": "iphone 10",
+            "id": 1
+        },
+        {
+            "status": 1,
+            "name": "iphone 11",
+            "id": 2
+        },
+        {
+            "status": 0,
+            "name": "iphone 12 product",
+            "id": 3
+        }
+    ],
+    "users": [{
+        "id": 1,
+        "email": "admin@gmail.com",
+        "password": "$2a$12$z4.hR2FL/e22LQ4b9ckVb.S8c6Qm6DEVztK1fMg/Z8wBiCzjc1a/G"
+    }]
 }
