@@ -1,29 +1,8 @@
 <div class="container">
     <div>
-        <div>
-            <h1 (click)="clickH1()">List Teachers {{name}}</h1>
-        </div>
-        <div>
-            <form action="">
-                <input type="text" (keydown)="changeInput($event)" [value]="inputValue">
-                <span>{{inputValue}}</span>
-            </form>
-        </div>
-        <div>
-            <button class="btn btn-info" (click)="changeList()">{{showStatus ? 'Ẩn' : 'Hiện'}} danh sách</button>
-        </div>
+        <!-- Đây là nơi mà component ở routers được render ra  -->
+        <router-outlet></router-outlet>
     </div>
-    <app-table [users]="teachers" *ngIf="showStatus"></app-table>
-    <!-- <div>
-        Tên sinh viên:
-        <app-name></app-name>
-        Mã sinh viên:
-        <app-identity></app-identity>
-    </div> -->
-
-
-
-
 </div>
 
-<router-outlet></router-outlet>
+<!-- <router-outlet></router-outlet> -->

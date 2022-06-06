@@ -4,24 +4,26 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { TableComponent } from './table/table.component';
-import { NameComponent } from './table/name/name.component';
-import { IdentityComponent } from './identity/identity.component';
-import { AgeComponent } from './table/age/age.component';
-import { GenderComponent } from './table/gender/gender.component';
-import { AvatarComponent } from './table/avatar/avatar.component';
-import { StatusComponent } from './table/status/status.component';
+import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
+import { ClientLayoutComponent } from './layouts/client-layout/client-layout.component';
+import { AdminProductDetailComponent } from './pages/admin/admin-product/admin-product-detail/admin-product-detail.component';
+import { AdminProductFormComponent } from './pages/admin/admin-product/admin-product-form/admin-product-form.component';
+import { AdminProductListComponent } from './pages/admin/admin-product/admin-product-list/admin-product-list.component';
+import { LoginComponent } from './pages/auth/login/login.component';
+import { ShowValidateComponent } from './component/show-validate/show-validate.component';
+import { HomeComponent } from './component/home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TableComponent,
-    NameComponent,
-    IdentityComponent,
-    AgeComponent,
-    GenderComponent,
-    AvatarComponent,
-    StatusComponent
+    AdminLayoutComponent,
+    ClientLayoutComponent,
+    AdminProductDetailComponent,
+    AdminProductFormComponent,
+    AdminProductListComponent,
+    LoginComponent,
+    ShowValidateComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
