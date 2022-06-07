@@ -12,6 +12,9 @@ import { AdminProductListComponent } from './pages/admin/admin-product/admin-pro
 import { LoginComponent } from './pages/auth/login/login.component';
 import { ShowValidateComponent } from './component/show-validate/show-validate.component';
 import { HomeComponent } from './component/home/home.component';
+import { ProductPageComponent } from './component/product-page/product-page.component';
+import { NewsPageComponent } from './component/news-page/news-page.component';
+import { ContactPageComponent } from './component/contact-page/contact-page.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,10 @@ import { HomeComponent } from './component/home/home.component';
     AdminProductListComponent,
     LoginComponent,
     ShowValidateComponent,
-    HomeComponent
+    HomeComponent,
+    ProductPageComponent,
+    NewsPageComponent,
+    ContactPageComponent
   ],
   imports: [
     BrowserModule,

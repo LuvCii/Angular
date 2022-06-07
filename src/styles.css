@@ -6,11 +6,63 @@
 }
 
 .container {
-    /* max-width: 1280px; */
+    max-width: 1500px;
     margin: auto;
-    /* background-color: burlywood; */
+}
+
+
+/*? Css trang homepage */
+
+.logo-header {
+    width: 120px;
+}
+
+.nav-item {
+    padding-left: 8px;
+    padding-right: 8px;
 }
 
 .navbar {
-    background-color: rgb(158, 158, 158);
+    background-color: rgb(47, 120, 255);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.container-fluid {
+    display: flex;
+    justify-content: space-between;
+}
+
+.right-navbar {
+    width: 1200px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.right-menu {
+    font-size: 17px;
+}
+
+.hover-underline {
+    display: inline-block;
+    position: relative;
+    color: white;
+}
+
+.hover-underline:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+
+.hover-underline:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }

@@ -1,34 +1,42 @@
 <div class="container">
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light">
+        <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
-                <a class="navbar-brand" href="">Navbar</a>
+                <div class="logo-head">
+                    <a class="" routerLink="">
+                        <img src="https://i.ibb.co/jvj6L31/logo.png" alt="logo" width="80px">
+                    </a>
+                </div>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Product</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">News</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Contact</a>
-                        </li>
-
-                    </ul>
-                    <form class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-btn-warning btn-outline-success" type="submit">Search</button>
-                    </form>
+                <div class="right-navbar ">
+                    <div class="right-menu">
+                        <ul class="navbar-nav  me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="hover-underline nav-link active text-white" routerLink="">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="hover-underline nav-link text-white " routerLink="/product">Product</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="hover-underline nav-link text-white " routerLink="/news">News</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="hover-underline nav-link text-white " routerLink="/contact">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="search-menu">
+                        <form class="d-flex">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-btn-warning btn-outline-success" type="submit">Search</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </nav>
     </header>
     <div>
+
         <!-- Đây là nơi những phần component thuộc client sẽ được render -->
         <router-outlet></router-outlet>
     </div>
