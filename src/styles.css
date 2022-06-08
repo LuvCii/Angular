@@ -1,5 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 
+
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
 * {
     margin: 0%;
     padding: 0%;
@@ -8,6 +13,13 @@
 .container {
     max-width: 100%;
     margin: auto;
+}
+
+header {
+    /* padding-bottom: 60px; */
+    position: fixed;
+    z-index: 20;
+    width: 1855px;
 }
 
 
@@ -23,7 +35,7 @@
 }
 
 .navbar {
-    background-color: rgb(245, 245, 245);
+    background-color: rgb(228, 228, 228);
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
 }
@@ -39,7 +51,12 @@
     justify-content: space-evenly;
 }
 
+.search-menu {
+    width: 300px;
+}
+
 .right-menu {
+    padding-top: 23px;
     font-size: 17px;
 }
 
@@ -65,269 +82,4 @@
 .hover-underline:hover:after {
     transform: scaleX(1);
     transform-origin: bottom left;
-}
-
-.container-banner {
-    display: flex;
-    position: absolute;
-    top: 20%;
-}
-
-.left-content-banner {
-    width: 1100px;
-}
-
-.banner-home {
-    margin-top: 20px;
-    margin-bottom: 100px;
-    position: relative;
-    width: 1855px;
-    /* overflow: hidden; */
-}
-
-.bg-banner {
-    overflow: hidden;
-}
-
-.bg-banner img {
-    max-width: 100%;
-    /* object-fit: cover; */
-    position: absolute;
-}
-
-@keyframes img1-hd {
-    0% {
-        left: -5px;
-    }
-    25% {
-        left: 0px;
-    }
-    50% {
-        left: -5px;
-    }
-    75% {
-        left: 0px;
-    }
-    100% {
-        left: -5px;
-    }
-}
-
-#image1 {
-    position: relative;
-    animation-name: img1-hd;
-    animation-duration: 10s;
-    animation-iteration-count: infinite;
-}
-
-@keyframes book {
-    0% {
-        bottom: 5px;
-    }
-    25% {
-        top: -15px;
-    }
-    50% {
-        bottom: 5px;
-    }
-    75% {
-        top: -15px;
-    }
-    100% {
-        bottom: 5px;
-    }
-}
-
-#book-banner {
-    position: relative;
-    transition: transform 3s ease-in-out;
-    animation-name: book;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-}
-
-.info {
-    position: absolute;
-    top: 20%;
-    left: 20%;
-}
-
-h1 {
-    font-size: 40px;
-}
-
-.container-banner .left-content-banner .sl1 a {
-    border-radius: 15px;
-    color: white;
-    background-color: burlywood;
-    border: 1px solid;
-    text-decoration: none;
-    padding: 15px 40px;
-    transition: all 0.5s ease-in-out;
-}
-
-.container-banner .left-content-banner .info a:hover {
-    border: #fd6666;
-    background-color: #fd6666;
-}
-
-#text1_sl1 {
-    animation: move_text 1.4s;
-    margin-bottom: -20px;
-    font-size: 40px;
-}
-
-#text2_sl1 {
-    margin-top: 30px;
-    font-size: 20px;
-    margin-bottom: 100px;
-    animation: move_texth2 1.2s;
-}
-
-@keyframes move_text {
-    0% {
-        transform: translateY(-100px);
-    }
-    100% {
-        transform: translateY(0);
-    }
-}
-
-@keyframes move_texth2 {
-    0% {
-        transform: translateX(250px);
-    }
-    50% {
-        transform: translateX(-30px);
-    }
-    100% {
-        transform: translateX(0);
-    }
-}
-
-.product-new {
-    margin-top: 50px;
-    position: relative;
-}
-
-.title-product-new h2 {
-    text-align: center;
-}
-
-.list-product-new {
-    margin-top: 60px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.box-product-new {
-    margin: 0px 15px 0px 15px;
-    padding: 20px 20px 0px 20px;
-    transition: all 0.5s ease-in-out;
-    overflow: hidden;
-}
-
-.action-box {
-    position: absolute;
-    z-index: 10;
-    overflow: hidden;
-}
-
-.action-box a {
-    text-decoration: none;
-    width: 20px;
-    color: aliceblue
-}
-
-.action-product {
-    margin: 5px 0px 5px 0px;
-    padding: 8px 10px 5px 10px;
-    background-color: #6b6b6b;
-    border-radius: 50%;
-}
-
-.action-product:hover {
-    background-color: rgb(255, 43, 43);
-}
-
-#eye {
-    transform: translateX(-80px);
-    transition: all 0.2s ease-in-out;
-}
-
-#cart {
-    transform: translateX(-80px);
-    transition: all 0.4s ease-in-out;
-}
-
-#like {
-    transform: translateX(-80px);
-    transition: all 0.6s ease-in-out;
-}
-
-.box-product-new:hover #eye {
-    transform: translateX(0px);
-}
-
-.box-product-new:hover #cart {
-    transform: translateX(0px);
-}
-
-.box-product-new:hover #like {
-    transform: translateX(0px);
-}
-
-.img-box-product {
-    overflow: hidden;
-}
-
-.img-box-product img {
-    transition: all 0.5s ease-in-out;
-    object-fit: cover;
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
-}
-
-.box-product-new:hover {
-    border: 2px solid rgba(196, 196, 196, 0.3);
-    border-radius: 20px;
-    transform: translateY(-7%);
-    box-shadow: 2px 5px 10px #333333;
-}
-
-.box-product-new:hover img {
-    transform: scale(110%);
-    -webkit-filter: grayscale(0);
-    filter: grayscale(0);
-}
-
-.text-box-product {
-    margin-top: 10px;
-    display: flex;
-    justify-content: space-evenly
-}
-
-.view-more {
-    margin-top: 50px;
-    margin-bottom: 50px;
-    text-align: center;
-}
-
-.view-more a:hover {
-    background-color: rgb(47, 85, 255);
-}
-
-.view-more a {
-    border-radius: 15px;
-    color: white;
-    background-color: burlywood;
-    border: 1px solid;
-    text-decoration: none;
-    padding: 15px 40px;
-    transition: all 0.5s ease-in-out;
-}
-
-hr {
-    text-align: center;
 }
