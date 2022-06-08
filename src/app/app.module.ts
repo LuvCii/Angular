@@ -24,7 +24,8 @@ import { AdminProductListComponent } from './pages/admin/admin-product/admin-pro
 import { AdminProductFormComponent } from './pages/admin/admin-product/admin-product-form/admin-product-form.component';
 import { AdminProductDetailComponent } from './pages/admin/admin-product/admin-product-detail/admin-product-detail.component';
 import { HttpClientModule } from '@angular/common/http';
-import { LoginComponent } from './pages/auth/login/login.component'
+import { LoginComponent } from './pages/auth/login/login.component';
+import { CartComponent } from './component/cart/cart.component'
 
 
 @NgModule({
@@ -48,7 +49,8 @@ import { LoginComponent } from './pages/auth/login/login.component'
     AdminProductListComponent,
     AdminProductFormComponent,
     AdminProductDetailComponent,
-    LoginComponent
+    LoginComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
