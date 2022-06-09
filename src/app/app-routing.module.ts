@@ -12,6 +12,7 @@ import { AdminProductDetailComponent } from './pages/admin/admin-product/admin-p
 import { AdminProductFormComponent } from './pages/admin/admin-product/admin-product-form/admin-product-form.component';
 import { AdminProductListComponent } from './pages/admin/admin-product/admin-product-list/admin-product-list.component';
 import { LoginComponent } from './pages/auth/login/login.component';
+import { SignupComponent } from './pages/auth/signup/signup.component';
 
 const routes: Routes = [
   {
@@ -70,8 +71,12 @@ const routes: Routes = [
     path: 'auth',
     children: [
       {
-        path: 'login',
+        path: 'signin',
         component: LoginComponent
+      },
+      {
+        path: 'signup',
+        component: SignupComponent
       }
     ]
   }

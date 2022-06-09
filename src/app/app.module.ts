@@ -19,6 +19,7 @@ import { AdminCategoryListComponent } from './pages/admin/admin-category/admin-c
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { DashboardComponent } from './component/dashboard/dashboard.component';
+import { SignupComponent } from './pages/auth/signup/signup.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,6 +37,7 @@ import { DashboardComponent } from './component/dashboard/dashboard.component';
     AdminCategoryListComponent,
     AdminProductListComponent,
     DashboardComponent,
+    SignupComponent,
   ],
   imports: [
     BrowserModule,
