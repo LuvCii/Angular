@@ -20,6 +20,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { SignupComponent } from './pages/auth/signup/signup.component';
+import { ProductDetailComponent } from './component/product-detail/product-detail.component';
+import { CartComponent } from './component/cart/cart.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,6 +40,8 @@ import { SignupComponent } from './pages/auth/signup/signup.component';
     AdminProductListComponent,
     DashboardComponent,
     SignupComponent,
+    ProductDetailComponent,
+    CartComponent,
   ],
   imports: [
     BrowserModule,

@@ -35,10 +35,10 @@
                 <h2>Sản phẩm mới nhất</h2>
             </div>
             <div class="list-product-new">
-                <div class="box-product-new">
+                <div *ngFor="let field of products" class="box-product-new">
                     <div class="action-box">
                         <div id="eye" class="action-product">
-                            <a href="">
+                            <a routerLink="product/{{field._id}}">
                                 <i class="fi fi-rr-eye"></i>
                             </a>
                         </div>
@@ -54,101 +54,11 @@
                         </div>
                     </div>
                     <div class="img-box-product">
-                        <img src="https://cdn0.fahasa.com/media/catalog/product/i/m/image_195509_1_36793.jpg" width="300px" alt="">
+                        <img src="{{field.img}}" width="300px" alt="">
                     </div>
                     <div class="text-box-product">
                         <div class="name-product">
-                            <p>Nhà giả kim</p>
-                        </div>
-                        <div class="price-product">
-                            <p>120 000 VNĐ</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="box-product-new">
-                    <div class="action-box">
-                        <div id="eye" class="action-product">
-                            <a href="">
-                                <i class="fi fi-rr-eye"></i>
-                            </a>
-                        </div>
-                        <div id="cart" class="action-product">
-                            <a href="">
-                                <i class="fi fi-rr-shopping-cart"></i>
-                            </a>
-                        </div>
-                        <div id="like" class="action-product">
-                            <a href="">
-                                <i class="fi fi-rr-heart"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="img-box-product">
-                        <img src="https://cdn0.fahasa.com/media/catalog/product/i/m/image_195509_1_36793.jpg" width="300px" alt="">
-                    </div>
-                    <div class="text-box-product">
-                        <div class="name-product">
-                            <p>Nhà giả kim</p>
-                        </div>
-                        <div class="price-product">
-                            <p>120 000 VNĐ</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="box-product-new">
-                    <div class="action-box">
-                        <div id="eye" class="action-product">
-                            <a href="">
-                                <i class="fi fi-rr-eye"></i>
-                            </a>
-                        </div>
-                        <div id="cart" class="action-product">
-                            <a href="">
-                                <i class="fi fi-rr-shopping-cart"></i>
-                            </a>
-                        </div>
-                        <div id="like" class="action-product">
-                            <a href="">
-                                <i class="fi fi-rr-heart"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="img-box-product">
-                        <img src="https://cdn0.fahasa.com/media/catalog/product/i/m/image_195509_1_36793.jpg" width="300px" alt="">
-                    </div>
-                    <div class="text-box-product">
-                        <div class="name-product">
-                            <p>Nhà giả kim</p>
-                        </div>
-                        <div class="price-product">
-                            <p>120 000 VNĐ</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="box-product-new">
-                    <div class="action-box">
-                        <div id="eye" class="action-product">
-                            <a href="">
-                                <i class="fi fi-rr-eye"></i>
-                            </a>
-                        </div>
-                        <div id="cart" class="action-product">
-                            <a href="">
-                                <i class="fi fi-rr-shopping-cart"></i>
-                            </a>
-                        </div>
-                        <div id="like" class="action-product">
-                            <a href="">
-                                <i class="fi fi-rr-heart"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="img-box-product">
-                        <img src="https://cdn0.fahasa.com/media/catalog/product/i/m/image_195509_1_36793.jpg" width="300px" alt="">
-                    </div>
-                    <div class="text-box-product">
-                        <div class="name-product">
-                            <p>Nhà giả kim</p>
+                            <p>{{field.name}}</p>
                         </div>
                         <div class="price-product">
                             <p>120 000 VNĐ</p>

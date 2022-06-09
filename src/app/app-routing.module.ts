@@ -4,6 +4,7 @@ import { ContactPageComponent } from './component/contact-page/contact-page.comp
 import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { HomeComponent } from './component/home/home.component';
 import { NewsPageComponent } from './component/news-page/news-page.component';
+import { ProductDetailComponent } from './component/product-detail/product-detail.component';
 import { ProductPageComponent } from './component/product-page/product-page.component';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { ClientLayoutComponent } from './layouts/client-layout/client-layout.component';
@@ -27,6 +28,11 @@ const routes: Routes = [
         path: 'product',
         component: ProductPageComponent
       },
+      {
+        path: 'product/:id',
+        component: ProductDetailComponent
+      },
+
       {
         path: 'news',
         component: NewsPageComponent

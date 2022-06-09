@@ -1,7 +1,10 @@
 export type Product = {
     _id: string,
     name: string,
+    img: string,
     price: number,
+    sale_price: number,
+    quantity: number,
     desc: string,
     status: number,
 };
@@ -13,7 +16,7 @@ export type ProductCreate = {
 };
 
 export type ProductCart = {
-    id: number,
+    _id: string,
     name: string,
     value: number
 }
