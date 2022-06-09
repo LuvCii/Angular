@@ -15,7 +15,9 @@ import { HomeComponent } from './component/home/home.component';
 import { ProductPageComponent } from './component/product-page/product-page.component';
 import { NewsPageComponent } from './component/news-page/news-page.component';
 import { ContactPageComponent } from './component/contact-page/contact-page.component';
-
+import { AdminCategoryListComponent } from './pages/admin/admin-category/admin-category-list/admin-category-list.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,12 +31,16 @@ import { ContactPageComponent } from './component/contact-page/contact-page.comp
     HomeComponent,
     ProductPageComponent,
     NewsPageComponent,
-    ContactPageComponent
+    ContactPageComponent,
+    AdminCategoryListComponent,
+    AdminProductListComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

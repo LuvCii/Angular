@@ -6,9 +6,11 @@ import { NewsPageComponent } from './component/news-page/news-page.component';
 import { ProductPageComponent } from './component/product-page/product-page.component';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { ClientLayoutComponent } from './layouts/client-layout/client-layout.component';
+import { AdminCategoryListComponent } from './pages/admin/admin-category/admin-category-list/admin-category-list.component';
 import { AdminProductDetailComponent } from './pages/admin/admin-product/admin-product-detail/admin-product-detail.component';
 import { AdminProductFormComponent } from './pages/admin/admin-product/admin-product-form/admin-product-form.component';
 import { AdminProductListComponent } from './pages/admin/admin-product/admin-product-list/admin-product-list.component';
+import { LoginComponent } from './pages/auth/login/login.component';
 
 const routes: Routes = [
   {
@@ -36,22 +38,38 @@ const routes: Routes = [
   {
     path: 'admin',
     component: AdminLayoutComponent,
+    // children: [
+    //   { path: 'product', component: AdminProductListComponent }
+    // ]
     children: [
       {
         path: 'products',
-        component: AdminProductListComponent
+        children: [
+          {
+            path: '',
+            component: AdminProductListComponent
+          }
+        ]
       },
       {
-        path: 'create',
-        component: AdminProductFormComponent
+        path: 'category',
+        children: [
+          {
+            path: '',
+            component: AdminCategoryListComponent
+          }
+        ]
       },
+
+    ]
+  },
+
+  {
+    path: 'auth',
+    children: [
       {
-        path: 'edit/:id',
-        component: AdminProductFormComponent
-      },
-      {
-        path: ':id',
-        component: AdminProductDetailComponent
+        path: 'login',
+        component: LoginComponent
       }
     ]
   }

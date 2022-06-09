@@ -27,6 +27,7 @@ header {
 
 .logo-header {
     width: 120px;
+    position: relative;
 }
 
 .nav-item {
@@ -46,16 +47,49 @@ header {
 }
 
 .right-navbar {
+    position: relative;
     width: 1200px;
     display: flex;
     justify-content: space-evenly;
 }
 
 .search-menu {
-    width: 300px;
+    margin-right: 50px;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.cart {
+    padding-top: 20px;
+    display: flex;
+}
+
+.notifyCart p {
+    color: #fff;
+    background-color: rgb(252, 81, 81);
+    padding: 3px 10px;
+    border: solid 1px rgb(252, 81, 81);
+    border-radius: 50%;
+    position: absolute;
+    z-index: 20;
+    top: 6px;
+    margin-left: -15px;
+}
+
+.login {
+    padding-top: 12px;
+    margin-left: 20px;
+}
+
+.right-navbar {
+    display: flex;
+    justify-content: space-between;
 }
 
 .right-menu {
+    padding-left: 80px;
     padding-top: 23px;
     font-size: 17px;
 }
