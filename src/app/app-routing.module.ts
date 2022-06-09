@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ContactPageComponent } from './component/contact-page/contact-page.component';
+import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { HomeComponent } from './component/home/home.component';
 import { NewsPageComponent } from './component/news-page/news-page.component';
 import { ProductPageComponent } from './component/product-page/product-page.component';
@@ -38,10 +39,11 @@ const routes: Routes = [
   {
     path: 'admin',
     component: AdminLayoutComponent,
-    // children: [
-    //   { path: 'product', component: AdminProductListComponent }
-    // ]
     children: [
+      {
+        path: '',
+        component: DashboardComponent
+      },
       {
         path: 'products',
         children: [

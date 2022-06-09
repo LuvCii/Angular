@@ -18,6 +18,7 @@ import { ContactPageComponent } from './component/contact-page/contact-page.comp
 import { AdminCategoryListComponent } from './pages/admin/admin-category/admin-category-list/admin-category-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { DashboardComponent } from './component/dashboard/dashboard.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +34,8 @@ import { FormsModule } from '@angular/forms';
     NewsPageComponent,
     ContactPageComponent,
     AdminCategoryListComponent,
-    AdminProductListComponent
+    AdminProductListComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
