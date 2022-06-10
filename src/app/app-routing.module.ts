@@ -6,12 +6,15 @@ import { HomeComponent } from './component/home/home.component';
 import { NewsPageComponent } from './component/news-page/news-page.component';
 import { ProductDetailComponent } from './component/product-detail/product-detail.component';
 import { ProductPageComponent } from './component/product-page/product-page.component';
+import { ShoppingCartComponent } from './component/shopping-cart/shopping-cart.component';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { ClientLayoutComponent } from './layouts/client-layout/client-layout.component';
+import { AdminCartListComponent } from './pages/admin/admin-cart/admin-cart-list/admin-cart-list.component';
 import { AdminCategoryListComponent } from './pages/admin/admin-category/admin-category-list/admin-category-list.component';
 import { AdminProductDetailComponent } from './pages/admin/admin-product/admin-product-detail/admin-product-detail.component';
 import { AdminProductFormComponent } from './pages/admin/admin-product/admin-product-form/admin-product-form.component';
 import { AdminProductListComponent } from './pages/admin/admin-product/admin-product-list/admin-product-list.component';
+import { AdminUserListComponent } from './pages/admin/admin-user/admin-user-list/admin-user-list.component';
 import { LoginComponent } from './pages/auth/login/login.component';
 import { SignupComponent } from './pages/auth/signup/signup.component';
 
@@ -32,7 +35,10 @@ const routes: Routes = [
         path: 'product/:id',
         component: ProductDetailComponent
       },
-
+      {
+        path: 'cart',
+        component: ShoppingCartComponent
+      },
       {
         path: 'news',
         component: NewsPageComponent
@@ -69,6 +75,25 @@ const routes: Routes = [
           }
         ]
       },
+      {
+        path: 'user',
+        children: [
+          {
+            path: '',
+            component: AdminUserListComponent
+          }
+        ]
+      },
+      {
+        path: 'cart',
+        children: [
+          {
+            path: '',
+            component: AdminCartListComponent
+          }
+        ]
+      }
+
 
     ]
   },
