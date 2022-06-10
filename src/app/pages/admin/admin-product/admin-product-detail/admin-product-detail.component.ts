@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { LocalStorageService } from 'src/app/services/local-storage.service';
 import { ProductService } from 'src/app/services/product.service';
 import { Product, ProductCart } from 'src/app/types/Products';
 
@@ -12,7 +13,11 @@ export class AdminProductDetailComponent implements OnInit {
   product: Product;
   cartItemValue: number = 1;
 
-  constructor(private productService: ProductService, private activeProductRoute: ActivatedRoute) {
+  constructor(
+    private productService: ProductService,
+    private activeProductRoute: ActivatedRoute,
+    private lsService: LocalStorageService
+  ) {
     this.product = {
       id: 0,
       name: '',
@@ -55,7 +60,7 @@ export class AdminProductDetailComponent implements OnInit {
     // }
     // // 4. Cập nhật dữ liệu giỏ hàng
     // localStorage.setItem('cart', JSON.stringify(cartItems));
-    this
+    this.lsService.setItem(addItem);
     // 5. Cập nhật lại giá trị cho ô input value
     this.cartItemValue = 1;
   }
