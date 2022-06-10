@@ -16,7 +16,7 @@ import { ProductPageComponent } from './component/product-page/product-page.comp
 import { NewsPageComponent } from './component/news-page/news-page.component';
 import { ContactPageComponent } from './component/contact-page/contact-page.component';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { SignupComponent } from './pages/auth/signup/signup.component';
 import { ProductDetailComponent } from './component/product-detail/product-detail.component';
@@ -62,6 +62,8 @@ import { AdminUserFormComponent } from './pages/admin/admin-user/admin-user-form
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     NgbModule,
     HttpClientModule,

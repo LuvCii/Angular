@@ -30,7 +30,7 @@ export class HomeComponent implements OnInit {
     this.productService.getProducts().subscribe((data) => {
       //? Khi có dữ liệu sẽ gán về danh sách
       this.products = data;
-      console.log(data);
+      // console.log(data);
 
     })
   }
