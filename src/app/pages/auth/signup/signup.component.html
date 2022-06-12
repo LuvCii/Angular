@@ -20,22 +20,25 @@
             <img src="/assets/signup/images/registration-form-8.jpg" alt="">
         </div>
         <div class="form-inner">
-            <form action="">
+            <form action="" [formGroup]="signInForm" (ngSubmit)="onSubmit()">
                 <div class="form-header">
                     <h3>Sign up</h3>
                     <img src="/assets/signup/images/sign-up.png" alt="" class="sign-up-icon">
                 </div>
                 <div class="form-group">
                     <label for="">Username:</label>
-                    <input type="text" class="form-control" data-validation="length alphanumeric" data-validation-length="3-12">
+                    <input type="text" class="form-control" formControlName="name">
+                    <app-show-validate [field]="signInForm.get('name')" key="Tên sản phẩm"></app-show-validate>
                 </div>
                 <div class="form-group">
                     <label for="">E-mail:</label>
-                    <input type="text" class="form-control" data-validation="email">
+                    <input type="email" class="form-control" formControlName="email">
+                    <app-show-validate [field]="signInForm.get('email')" key="Tên sản phẩm"></app-show-validate>
                 </div>
                 <div class="form-group">
                     <label for="">Password:</label>
-                    <input type="password" class="form-control" data-validation="length" data-validation-length="min8">
+                    <input type="password" class="form-control" formControlName="password">
+                    <app-show-validate [field]="signInForm.get('password')" key="Tên sản phẩm"></app-show-validate>
                 </div>
                 <button>create my account</button>
                 <div class="socials">

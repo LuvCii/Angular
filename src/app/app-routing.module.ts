@@ -30,9 +30,13 @@ const routes: Routes = [
         component: HomeComponent
       },
       {
-        path: 'product',
+        path: 'category/:id',
         component: ProductPageComponent
       },
+      // {
+      //   path: 'category/:id',
+      //   component: ProductDetailComponent
+      // },
       {
         path: 'product/:id',
         component: ProductDetailComponent

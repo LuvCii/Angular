@@ -43,6 +43,9 @@ export class AdminProductFormComponent implements OnInit {
       status: new FormControl('', [
         Validators.required
       ]),
+      category: new FormControl('', [
+        Validators.required
+      ]),
       desc: new FormControl('', [
         Validators.required
       ]),
@@ -64,7 +67,8 @@ export class AdminProductFormComponent implements OnInit {
           quantity: data.quantity,
           img: data.img,
           status: data.status,
-          desc: data.desc
+          desc: data.desc,
+          category: data.category
         })
       })
     }

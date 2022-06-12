@@ -52,6 +52,12 @@
                             <app-show-validate [field]="productForm.get('status')" key="Tên sản phẩm">
                             </app-show-validate>
                         </div>
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="" formControlName="category" type="text" placeholder="Category" />
+                            <label for="Category">Category</label>
+                            <app-show-validate [field]="productForm.get('category')" key="Tên sản phẩm">
+                            </app-show-validate>
+                        </div>
                         <!-- Message Input -->
                         <div class="form-floating mb-3">
                             <textarea class="form-control" formControlName="desc" id="" type="text" placeholder="Message" style="height: 10rem;"></textarea>

@@ -19,9 +19,10 @@
                                     <i class="fa fa-caret-down"></i>
                                 </button>
                                 <div class="noidung_dropdown">
-                                    <a routerLink="#">Đường Dẫn 1</a>
-                                    <a href="#">Đường Dẫn 2</a>
-                                    <a href="#">Đường Dẫn 3</a>
+                                    <div *ngFor="let field of categories">
+                                        <a routerLink="category/{{field._id}}">{{field.name}}</a>
+
+                                    </div>
                                 </div>
                             </div>
                             <!-- <li class="nav-item">

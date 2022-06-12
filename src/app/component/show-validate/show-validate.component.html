@@ -13,7 +13,7 @@
 <span class="text-warning" *ngIf="(field.dirty || field.touched)  && field.errors?.['max']">{{key}} không được trên
     {{field.errors?.['max'].max}}
 </span>
-<span class="text-warning" *ngIf="(field.dirty || field.touched)  && field.errors?.['email']">{{key}}phải đúng
+<span class="text-danger" *ngIf="(field.dirty || field.touched)  && field.errors?.['email']">{{key}}phải đúng
     định dạng
 </span>
 

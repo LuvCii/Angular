@@ -23,6 +23,9 @@ export class ProductService {
   deleteProduct(_id: number | string): Observable<any> {
     return this.http.delete(`${environment.products}/${_id}`)
   }
+  getCategory(_id: string): Observable<Product[]> {
+    return this.http.get<Product[]>(`${environment.category}/${_id}`)
+  }
 
   //? Dữ liệu gửi đi {name: string}, nhận về {_id: number, name: string}
   createProduct(data: ProductCreate): Observable<Product> {

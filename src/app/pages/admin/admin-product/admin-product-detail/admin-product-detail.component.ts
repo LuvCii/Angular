@@ -20,6 +20,7 @@ export class AdminProductDetailComponent implements OnInit {
       sale_price: 0,
       img: '',
       quantity: 0,
+      category: '',
       status: 0,
       desc: ''
     }

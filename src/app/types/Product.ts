@@ -5,6 +5,7 @@ export type Product = {
     price: number,
     sale_price: number,
     quantity: number,
+    category: string,
     desc: string,
     status: number,
 };
@@ -21,5 +22,11 @@ export type ProductCreate = {
 export type ProductCart = {
     _id: string,
     name: string,
+    img: string,
+    price: number,
+    sale_price: number,
+    quantity: number,
+    category: string,
+    desc: string,
     value: number
 }
