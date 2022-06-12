@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from 'src/app/services/product.service';
 import { Product } from 'src/app/types/Product';
+import { NgToastService } from 'ng-angular-popup';
 
 @Component({
   selector: 'app-admin-product-list',
@@ -11,7 +12,10 @@ export class AdminProductListComponent implements OnInit {
   products: Product[];
 
   //? Định nghĩa service dưới dạng 1 tên biến, đã tạo bên services
-  constructor(private productService: ProductService) {
+  constructor(
+    private productService: ProductService,
+    private toast: NgToastService
+  ) {
     this.products = [];
   }
 
@@ -32,15 +36,20 @@ export class AdminProductListComponent implements OnInit {
     })
   }
 
-  // onUpdateStatus(productId: number, newStatus: number) {
-  //   this.productService.updateProduct(`${productId}`, {
-  //     status: newStatus,
-  //     price: 0,
-  //     desc: ''
-  //   }).subscribe(data => {
-  //     this.onGetList();
-  //   });
-  // }
+  onUpdateStatus(productId: string, newStatus: number) {
+    this.productService.updateProduct(productId, {
+      status: newStatus,
+      // img: '',
+      // price: 0,
+      // sale_price: 0,
+      // quantity: 0,
+      // desc: ''
+
+    }).subscribe(data => {
+      this.toast.success({ detail: 'Message', summary: 'Update Success', duration: 2000 });
+      this.onGetList();
+    });
+  }
 
   onDelete(id: string | number) {
     //? confirm
@@ -49,6 +58,7 @@ export class AdminProductListComponent implements OnInit {
     if (confirmDelete && id) {
       // console.log(id);
       this.productService.deleteProduct(id).subscribe((data) => {
+        this.toast.success({ detail: 'Message', summary: 'Delete Success', duration: 3000 });
         //? Cập nhật lại danh sách
         this.onGetList()
       })

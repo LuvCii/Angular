@@ -1,1 +1,35 @@
 <p>admin-user-list works!</p>
+<div class="container">
+    <!-- <div>
+        <a routerLink="/admin/products/create">
+            <button class="btn btn-primary">Create</button>
+        </a>
+    </div> -->
+    <table class="table">
+        <thead class="thead-dark">
+            <tr class="">
+                <th scope="col">STT</th>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Status</th>
+                <th scope="col">Action</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let field of users ; index as i">
+                <td>{{i + 1}}</td>
+                <td>{{field.name}}</td>
+                <td>{{field.email}}</td>
+                <td>
+                    <button *ngIf="field.role === 1" class="btn btn-success" (click)="onUpdateStatus(field._id, 0)">Admin</button>
+                    <button *ngIf="field.role === 0" class="btn btn-dark" (click)="onUpdateStatus(field._id, 1)">Member</button>
+                </td>
+                <td>
+                    <button class="btn btn-danger  mx-2" (click)="onDelete(field._id)">Delete</button>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>

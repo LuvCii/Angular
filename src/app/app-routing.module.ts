@@ -7,9 +7,11 @@ import { NewsPageComponent } from './component/news-page/news-page.component';
 import { ProductDetailComponent } from './component/product-detail/product-detail.component';
 import { ProductPageComponent } from './component/product-page/product-page.component';
 import { ShoppingCartComponent } from './component/shopping-cart/shopping-cart.component';
+import { CanAccessAdminGuard } from './guards/can-access-admin.guard';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { ClientLayoutComponent } from './layouts/client-layout/client-layout.component';
 import { AdminCartListComponent } from './pages/admin/admin-cart/admin-cart-list/admin-cart-list.component';
+import { AdminCategoryFormComponent } from './pages/admin/admin-category/admin-category-form/admin-category-form.component';
 import { AdminCategoryListComponent } from './pages/admin/admin-category/admin-category-list/admin-category-list.component';
 import { AdminProductDetailComponent } from './pages/admin/admin-product/admin-product-detail/admin-product-detail.component';
 import { AdminProductFormComponent } from './pages/admin/admin-product/admin-product-form/admin-product-form.component';
@@ -52,6 +54,7 @@ const routes: Routes = [
   {
     path: 'admin',
     component: AdminLayoutComponent,
+    canActivate: [CanAccessAdminGuard],
     children: [
       {
         path: '',
@@ -63,7 +66,15 @@ const routes: Routes = [
           {
             path: '',
             component: AdminProductListComponent
-          }
+          },
+          {
+            path: 'create',
+            component: AdminProductFormComponent
+          },
+          {
+            path: 'edit/:id',
+            component: AdminProductFormComponent
+          },
         ]
       },
       {
@@ -72,7 +83,15 @@ const routes: Routes = [
           {
             path: '',
             component: AdminCategoryListComponent
-          }
+          },
+          {
+            path: 'create',
+            component: AdminCategoryFormComponent
+          },
+          {
+            path: 'edit/:id',
+            component: AdminCategoryFormComponent
+          },
         ]
       },
       {

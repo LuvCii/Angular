@@ -1,20 +1,79 @@
 <p>admin-product-form works!</p>
-<!-- //? Đinh nghĩa biến quản lý form -->
-<form (ngSubmit)="onSubmit()">
-    <div class="form-group">
-        <label for="">Name</label>
-        <!-- ?  Định nghĩa thuộc tính để lắng nghe input -->
-        <input type="text" class="form-control" formControlName="name">
-        <!-- <input type="text" class="form-control" formControlName="price"> -->
-        <!-- <div>
-          <span *ngIf="(productForm.get('name')?.dirty || productForm.get('name')?.touched) && productForm.get('name')?.errors?.['required']">
-            Tên sp không được để trống
-          </span>
-        </div> -->
-        <!-- productForm.get('tên thuộc tính = new FormGroup()') sẽ là kết quả khi lắng nghe -->
-        <!-- <app-show-validate [field]="productForm.get('name')" key="Tên sản phẩm"></app-show-validate> -->
+<div class="container px-5 my-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card border-0 rounded-3 shadow-lg">
+                <div class="card-body p-4">
+                    <div class="text-center">
+                        <div class="h1 fw-light">Contact Form</div>
+                    </div>
+
+
+
+                    <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+
+
+                        <!-- Name Input -->
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="name" formControlName="name" type="text" placeholder="Name" />
+                            <label for="name">Name</label>
+                            <app-show-validate [field]="productForm.get('name')" key="Tên sản phẩm"></app-show-validate>
+                        </div>
+
+                        <!-- Price Input -->
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="" formControlName="price" type="number" min="0" max="" placeholder="Price" />
+                            <label for="Price">Price</label>
+                            <app-show-validate [field]="productForm.get('price')" key="Tên sản phẩm">
+                            </app-show-validate>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input class="form-control" formControlName="sale_price" id="" type="number" min="0" max="" placeholder="Price sale" />
+                            <label for="Price">Sale Price</label>
+                            <app-show-validate [field]="productForm.get('sale_price')" key="Tên sản phẩm">
+                            </app-show-validate>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input class="form-control" formControlName="quantity" id="" type="number" min="0" max="" placeholder="Quantity" />
+                            <label for="Price">Quantity</label>
+                            <app-show-validate [field]="productForm.get('quantity')" key="Tên sản phẩm">
+                            </app-show-validate>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="" formControlName="img" type="text" placeholder="Image" />
+                            <label for="Price">Image</label>
+                            <app-show-validate [field]="productForm.get('img')" key="Tên sản phẩm">
+                            </app-show-validate>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="" formControlName="status" type="number" min="0" max="" placeholder="Status" />
+                            <label for="Price">Status</label>
+                            <app-show-validate [field]="productForm.get('status')" key="Tên sản phẩm">
+                            </app-show-validate>
+                        </div>
+                        <!-- Message Input -->
+                        <div class="form-floating mb-3">
+                            <textarea class="form-control" formControlName="desc" id="" type="text" placeholder="Message" style="height: 10rem;"></textarea>
+                            <label for="message">Description</label>
+                            <app-show-validate [field]="productForm.get('desc')" key="Tên sản phẩm">
+                            </app-show-validate>
+                        </div>
+
+
+
+                        <!-- Submit button -->
+                        <div class="d-grid">
+                            <button class="btn btn-primary">Submit</button>
+                        </div>
+                    </form>
+                    <!-- End of contact form -->
+
+                </div>
+            </div>
+        </div>
     </div>
-    <div>
-        <button class="btn btn-success" [disabled]="!productForm.valid">Submit</button>
-    </div>
-</form>
+</div>
+
+<!-- CDN Link to SB Forms Scripts -->
+<script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>S

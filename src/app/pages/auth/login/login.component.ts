@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
+import { NgToastService } from 'ng-angular-popup';
 
 @Component({
   selector: 'app-login',
@@ -13,7 +14,8 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private authService: AuthService,
-    private router: Router
+    private router: Router,
+    private toast: NgToastService
   ) {
     this.loginForm = new FormGroup({
       email: new FormControl(''),
@@ -33,9 +35,13 @@ export class LoginComponent implements OnInit {
       localStorage.setItem('loggedInUser', JSON.stringify(data))
       //? 2. Điều hướng quay về admin
       if (data.user.role == 1) {
+        this.toast.success({ detail: ' Message', summary: 'Đăng nhập thành công', duration: 3000 });
         this.router.navigateByUrl('/admin');
-      } else {
+      } else if (data.user.role == 0) {
+        this.toast.success({ detail: 'Message', summary: 'Đăng nhập thành công', duration: 3000 });
         this.router.navigateByUrl('/');
+      } else {
+        this.toast.error({ detail: 'Error Message', summary: 'Đăng nhập thất bại', duration: 3000 });
       }
     });
   }

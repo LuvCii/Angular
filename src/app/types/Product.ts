@@ -10,9 +10,12 @@ export type Product = {
 };
 export type ProductCreate = {
     name?: string,
-    price: number,
-    desc: string,
-    status?: number
+    // img: string,
+    // price: number,
+    // sale_price: number,
+    // quantity: number,
+    // desc: string,
+    status?: number,
 };
 
 export type ProductCart = {

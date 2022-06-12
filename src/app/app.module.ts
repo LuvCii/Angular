@@ -30,6 +30,7 @@ import { AdminCategoryFormComponent } from './pages/admin/admin-category/admin-c
 import { AdminUserListComponent } from './pages/admin/admin-user/admin-user-list/admin-user-list.component';
 import { AdminUserDetailComponent } from './pages/admin/admin-user/admin-user-detail/admin-user-detail.component';
 import { AdminUserFormComponent } from './pages/admin/admin-user/admin-user-form/admin-user-form.component';
+import { NgToastModule } from 'ng-angular-popup';
 
 @NgModule({
   declarations: [
@@ -67,7 +68,8 @@ import { AdminUserFormComponent } from './pages/admin/admin-user/admin-user-form
     AppRoutingModule,
     NgbModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    NgToastModule
   ],
   providers: [],
   bootstrap: [AppComponent]

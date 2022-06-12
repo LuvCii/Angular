@@ -1,1 +1,22 @@
-<p>show-validate works!</p>
+<span class="text-danger" *ngIf="(field.dirty || field.touched)  && field.errors?.['required']">{{key}} không được để
+    trống
+</span>
+<span class="text-warning" *ngIf="(field.dirty || field.touched) && field.errors?.['minlength']">{{key}} không được dưới
+    {{field.errors?.['minlength'].requiredLength}} ký tự
+</span>
+<span class="text-warning" *ngIf="(field.dirty || field.touched) && field.errors?.['maxlength']">{{key}} tối đa
+    {{field.errors?.['maxlength'].requiredLength}} ký tự
+</span>
+<span class="text-warning" *ngIf="(field.dirty || field.touched)  && field.errors?.['min']">{{key}} không được dưới
+    {{field.errors?.['min'].min}}
+</span>
+<span class="text-warning" *ngIf="(field.dirty || field.touched)  && field.errors?.['max']">{{key}} không được trên
+    {{field.errors?.['max'].max}}
+</span>
+<span class="text-warning" *ngIf="(field.dirty || field.touched)  && field.errors?.['email']">{{key}}phải đúng
+    định dạng
+</span>
+
+<span class="text-warning" *ngIf="(field.dirty || field.touched)  && field.errors?.['hasProductError']">{{key}}phải chứa
+    từ 'http'
+</span>

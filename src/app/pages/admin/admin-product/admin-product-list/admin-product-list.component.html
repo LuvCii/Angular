@@ -9,6 +9,8 @@
             <tr class="">
                 <th scope="col">ID</th>
                 <th scope="col">Name</th>
+                <th scope="col">Image</th>
+                <th scope="col">Price</th>
                 <th scope="col">Status</th>
                 <th scope="col">Action</th>
 
@@ -19,12 +21,15 @@
                 <td>{{i + 1}}</td>
                 <td>{{field.name}}</td>
                 <td>
-                    <!-- <button *ngIf="field.status === 1" class="btn btn-success" (click)="onUpdateStatus(field.id, 0)">ON</button> -->
-                    <!-- <button *ngIf="field.status === 0" class="btn btn-dark" (click)="onUpdateStatus(field.id, 1)">OFF</button> -->
+                    <img src="{{field.img}}" width="80px" alt="">
+                </td>
+                <td>{{field.price}}</td>
+                <td>
+                    <button *ngIf="field.status === 1" class="btn btn-success" (click)="onUpdateStatus(field._id, 0)">ON</button>
+                    <button *ngIf="field.status === 0" class="btn btn-dark" (click)="onUpdateStatus(field._id, 1)">OFF</button>
                 </td>
                 <td>
-                    <a routerLink="/admin/products/edit/{{field._id}}"> </a>
-                    <a [routerLink]="['/admin', 'products', field._id]">
+                    <a routerLink="/admin/products/edit/{{field._id}}">
                         <button class="btn btn-warning">Edit</button>
                     </a>
                     <button class="btn btn-danger  mx-2" (click)="onDelete(field._id)">Delete</button>
